@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/audiowide"
-        android:text="@string/txt_venedicto"
+        android:text="@string/txt_benedicto"
         android:textAlignment="center"
         android:textColor="#397C64"
         android:textSize="40sp"
