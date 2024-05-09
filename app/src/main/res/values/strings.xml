@@ -3,73 +3,73 @@
     <string name="txt_bienvenida">¡Bienvenido al Juego de Preguntas de Kotlin!</string>
     <string name="txt_preguntas">Número de preguntas:      8 </string>
     <string name="txt_duracion">Duración:      5min </string>
-    <string name="btn_play">Play</string>
+    <string name="btn_play">Jugar</string>
     <string name="btn_validar">Validar</string>
     <string name="btn_next">Continuar</string>
     <string name="txt_res_detallada">A continuación se le muestra una respuesta más detallada.</string>
 
     <string name="txt_pregunta1">¿Cuál es el tipo de dato utilizado para representar números enteros en Kotlin?</string>
-    <string name="rdb_pg1_opc1">a) Int</string>
-    <string name="rdb_pg1_opc2">b) Float</string>
-    <string name="rdb_pg1_opc3">c) Double</string>
-    <string name="rdb_pg1_opc4">d) String</string>
-    <string name="txt_rpt_pg1">Respuesta correcta: a) Int
+    <string name="rdb_pg1_opc1">Int</string>
+    <string name="rdb_pg1_opc2">Float</string>
+    <string name="rdb_pg1_opc3">Double</string>
+    <string name="rdb_pg1_opc4">String</string>
+    <string name="txt_rpt_pg1">Respuesta correcta: Int
     Explicación: En Kotlin, el tipo de dato Int se utiliza para representar números enteros. Los tipos Float y Double son para números decimales, mientras que String es para cadenas de texto.</string>
 
     <string name="txt_pregunta2">¿Cuál es la palabra clave utilizada para definir una función en Kotlin?</string>
-    <string name="rdb_pg2_opc1">a) fun</string>
-    <string name="rdb_pg2_opc2">b) def</string>
-    <string name="rdb_pg2_opc3">c) funtion</string>
-    <string name="rdb_pg2_opc4">d) function</string>
-    <string name="txt_rpt_pg2">Respuesta correcta: a) fun
+    <string name="rdb_pg2_opc1">fun</string>
+    <string name="rdb_pg2_opc2">def</string>
+    <string name="rdb_pg2_opc3">funtion</string>
+    <string name="rdb_pg2_opc4">function</string>
+    <string name="txt_rpt_pg2">Respuesta correcta: fun
     Explicación: La palabra clave fun se utiliza en Kotlin para definir una función. Es la forma estándar de declarar funciones en este lenguaje.</string>
 
     <string name="txt_pregunta3">¿Qué operador se utiliza en Kotlin para realizar una comparación estricta entre dos valores?</string>
-    <string name="rdb_pg3_opc1">a) ==</string>
-    <string name="rdb_pg3_opc2">b) ===</string>
-    <string name="rdb_pg3_opc3">c) !=</string>
-    <string name="rdb_pg3_opc4">d) !==</string>
-    <string name="txt_rpt_pg3">Respuesta correcta: b) ===
+    <string name="rdb_pg3_opc1">==</string>
+    <string name="rdb_pg3_opc2">===</string>
+    <string name="rdb_pg3_opc3">!=</string>
+    <string name="rdb_pg3_opc4">!==</string>
+    <string name="txt_rpt_pg3">Respuesta correcta: ===
     Explicación: El operador === se utiliza en Kotlin para realizar una comparación estricta entre dos valores, verificando si son el mismo objeto en memoria.</string>
 
     <string name="txt_pregunta4">¿Cuál es el operador utilizado en Kotlin para realizar un bucle sobre una colección de elementos?</string>
-    <string name="rdb_pg4_opc1">a) while</string>
-    <string name="rdb_pg4_opc2">b) until</string>
-    <string name="rdb_pg4_opc3">c) for</string>
-    <string name="rdb_pg4_opc4">d) loop</string>
-    <string name="txt_rpt_pg4">Respuesta correcta: c) for
+    <string name="rdb_pg4_opc1">while</string>
+    <string name="rdb_pg4_opc2">until</string>
+    <string name="rdb_pg4_opc3">for</string>
+    <string name="rdb_pg4_opc4">loop</string>
+    <string name="txt_rpt_pg4">Respuesta correcta: for
     Explicación: El operador for se utiliza en Kotlin para realizar un bucle sobre una colección de elementos, como listas o arrays.</string>
 
     <string name="txt_pregunta5">¿Cuál de las siguientes es una característica de la programación funcional en Kotlin?</string>
-    <string name="rdb_pg5_opc1">a) Herencia múltiple</string>
-    <string name="rdb_pg5_opc2">b) Tipado dinámico</string>
-    <string name="rdb_pg5_opc3">c) High-order functions</string>
-    <string name="rdb_pg5_opc4">d) Sobrecarga de operadores</string>
-    <string name="txt_rpt_pg5">Respuesta correcta: c) High-order functions
+    <string name="rdb_pg5_opc1">Herencia múltiple</string>
+    <string name="rdb_pg5_opc2">Tipado dinámico</string>
+    <string name="rdb_pg5_opc3">High-order functions</string>
+    <string name="rdb_pg5_opc4">Sobrecarga de operadores</string>
+    <string name="txt_rpt_pg5">Respuesta correcta: High-order functions
     Explicación: Una característica de la programación funcional en Kotlin son las funciones de orden superior (high-order functions), que son funciones que pueden recibir otras funciones como parámetros o devolver funciones como resultado.</string>
 
     <string name="txt_pregunta6">¿Qué función se utiliza en Kotlin para leer una entrada desde la consola?</string>
-    <string name="rdb_pg6_opc1">a) readConsole()</string>
-    <string name="rdb_pg6_opc2">b) readLine()</string>
-    <string name="rdb_pg6_opc3">c) readInput()</string>
-    <string name="rdb_pg6_opc4">d) getInput()</string>
-    <string name="txt_rpt_pg6">Respuesta correcta: b) readLine()
+    <string name="rdb_pg6_opc1">readConsole()</string>
+    <string name="rdb_pg6_opc2">readLine()</string>
+    <string name="rdb_pg6_opc3">readInput()</string>
+    <string name="rdb_pg6_opc4">getInput()</string>
+    <string name="txt_rpt_pg6">Respuesta correcta: readLine()
     Explicación: La función readLine() se utiliza en Kotlin para leer una línea de texto desde la consola estándar.</string>
 
     <string name="txt_pregunta7">En Kotlin, ¿cuál es la forma correcta de declarar una variable constante?</string>
-    <string name="rdb_pg7_opc1">a) val x = 10</string>
-    <string name="rdb_pg7_opc2">b) var x = 10</string>
-    <string name="rdb_pg7_opc3">c) const x = 10</string>
-    <string name="rdb_pg7_opc4">d) let x = 10</string>
-    <string name="txt_rpt_pg7">Respuesta correcta: a) val x = 10
+    <string name="rdb_pg7_opc1">val x = 10</string>
+    <string name="rdb_pg7_opc2">var x = 10</string>
+    <string name="rdb_pg7_opc3">const x = 10</string>
+    <string name="rdb_pg7_opc4">let x = 10</string>
+    <string name="txt_rpt_pg7">Respuesta correcta: val x = 10
     Explicación: En Kotlin, se utiliza la palabra clave val seguida del nombre de la variable para declarar una constante. Por ejemplo, val x = 10 declara la constante x con el valor 10.</string>
 
     <string name="txt_pregunta8">¿Qué tipo de herencia se admite en Kotlin?</string>
-    <string name="rdb_pg8_opc1">a) Herencia simple</string>
-    <string name="rdb_pg8_opc2">b) Herencia múltiple</string>
-    <string name="rdb_pg8_opc3">c) Herencia jerárquica</string>
-    <string name="rdb_pg8_opc4">d) Herencia compleja</string>
-    <string name="txt_rpt_pg8">Respuesta correcta: a) Herencia simple
+    <string name="rdb_pg8_opc1">Herencia simple</string>
+    <string name="rdb_pg8_opc2">Herencia múltiple</string>
+    <string name="rdb_pg8_opc3">Herencia jerárquica</string>
+    <string name="rdb_pg8_opc4">Herencia compleja</string>
+    <string name="txt_rpt_pg8">Respuesta correcta: Herencia simple
     Explicación: Kotlin admite herencia simple, lo que significa que una clase puede heredar de una única clase padre. La herencia múltiple no está permitida en Kotlin para evitar problemas asociados con la ambigüedad de métodos y propiedades.</string>
 
 
