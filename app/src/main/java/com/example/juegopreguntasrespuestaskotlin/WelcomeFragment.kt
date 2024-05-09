@@ -15,6 +15,7 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
 
         val btnJugar = view.findViewById<Button>(R.id.btn_play)
 
+        //Nos dirigimos a el siguiente fragmento: La pantalla de la pregunta.
         btnJugar.setOnClickListener {
             view.findNavController().navigate(R.id.action_welcomeFragment_to_questionFragment)
         }
