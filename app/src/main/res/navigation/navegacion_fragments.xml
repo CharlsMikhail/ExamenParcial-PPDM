@@ -9,7 +9,11 @@
         android:id="@+id/answerFragment"
         android:name="com.example.juegopreguntasrespuestaskotlin.AnswerFragment"
         android:label="fragment_answer"
-        tools:layout="@layout/fragment_answer" />
+        tools:layout="@layout/fragment_answer" >
+        <action
+            android:id="@+id/action_answerFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment" />
+    </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.juegopreguntasrespuestaskotlin.WelcomeFragment"
@@ -28,4 +32,9 @@
             android:id="@+id/action_questionFragment_to_answerFragment"
             app:destination="@id/answerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="com.example.juegopreguntasrespuestaskotlin.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score" />
 </navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    tools:context=".ScoreFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/audiowide"
+        android:text="@string/txt_score"
+        android:textAlignment="center"
+        android:textColor="#397C64"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/chakra_petch_light"
+        android:text="@string/score"
+        android:textAlignment="center"
+        android:textColor="#3C2929"
+        android:textSize="37sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="#B83636"
+        android:fontFamily="@font/frijole"
+        android:padding="5dp"
+        android:text="@string/btn_inicio"
+        android:textSize="25sp" />
+
+</LinearLayout>
