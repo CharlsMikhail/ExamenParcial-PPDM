@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Preguntas De Kotlin</string>
-    <string name="hello_blank_fragment">¡Bienvenido al Juego de Preguntas de Kotlin!</string>
+    <string name="txt_bienvenida">¡Bienvenido al Juego de Preguntas de Kotlin!</string>
+    <string name="txt_preguntas">Número de preguntas:      8 </string>
+    <string name="txt_duracion">Duración:      5min </string>
+    <string name="btn_play">Play</string>
 </resources>
