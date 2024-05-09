@@ -1,6 +1,5 @@
-# Examen Parcial-PPDM
-## Juego: KotLearn  
+# Juego: KotLearn  
 
-## Este repositorio es exclusivamente para el examaen parcial del curso de Programación de Dispositivos Moviles.  
-## Alumno: Carlos Mijail Mamani Anccasi
+## Este repositorio es exclusivamente para el examen parcial del curso de Programación de Dispositivos Moviles.  
+### Alumno: Carlos Mijail Mamani Anccasi
 
