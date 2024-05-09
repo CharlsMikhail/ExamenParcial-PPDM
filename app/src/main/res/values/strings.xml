@@ -4,4 +4,11 @@
     <string name="txt_preguntas">Número de preguntas:      8 </string>
     <string name="txt_duracion">Duración:      5min </string>
     <string name="btn_play">Play</string>
+    <string name="txt_pregunta1">¿Cuál es el tipo de dato utilizado para representar números enteros en Kotlin?</string>
+    <string name="rdb_pg1_opc1">a) Int</string>
+    <string name="rdb_pg1_opc2">b) Float</string>
+    <string name="rdb_pg1_opc3">c) Double</string>
+    <string name="rdb_pg1_opc4">d) String</string>
+    <string name="btn_validar">Validar</string>
+    <string name="btn_next">Continuar</string>
 </resources>

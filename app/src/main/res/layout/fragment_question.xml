@@ -8,8 +8,55 @@
     tools:context=".QuestionFragment">
 
     <TextView
+        android:id="@+id/txt_pregunta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_pregunta1"
+        android:textSize="30sp"/>
+
+    <RadioGroup
+        android:layout_marginTop="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RadioButton
+            android:id="@+id/rdb_pregunta_opc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/rdb_pg1_opc1" />
+
+        <RadioButton
+            android:id="@+id/rdb_pregunta_opc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/rdb_pg1_opc2" />
+
+        <RadioButton
+            android:id="@+id/rdb_pregunta_opc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/rdb_pg1_opc3" />
+
+        <RadioButton
+            android:id="@+id/rdb_pregunta_opc4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="@string/rdb_pg1_opc4" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_play"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#B83636"
+        android:padding="5dp"
+        android:text="@string/btn_validar"
+        android:textSize="25sp" />
 
 </LinearLayout>
