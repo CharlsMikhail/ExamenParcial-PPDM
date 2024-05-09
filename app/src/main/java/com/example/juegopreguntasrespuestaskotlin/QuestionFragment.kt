@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.findNavController
 
 const val KEY_NUM_QUESTION = "question"
@@ -28,6 +29,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         val rdbOpc1 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc1)
         val rdbOpc2 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc2)
         val rdbOpc3 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc3)
+        val rdbOpc4 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc4)
 
         val btnValidar = view.findViewById<Button>(R.id.btn_validar)
 
@@ -36,7 +38,11 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
                 rdbOpc1.isChecked -> 1
                 rdbOpc2.isChecked -> 2
                 rdbOpc3.isChecked -> 3
-                else -> 4
+                rdbOpc4.isChecked -> 4
+                else -> {
+                    Toast.makeText(context, "Por favor, seleccione una opción", Toast.LENGTH_LONG).show()
+                    return@setOnClickListener  // Salir del evento de clic sin continuar
+                }
             }
 
             val benedicto = calcularBenedicto(opcionElegida)
