@@ -10,11 +10,13 @@ import androidx.navigation.findNavController
 
 const val KEY_NUM_QUESTION = "question"
 const val KEY_BENEDICT = "answer"
+const val KEY_SCORE ="score"
 
 class QuestionFragment : Fragment(R.layout.fragment_question) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (numPregunta >= 8) { puntuacion = 0; numPregunta = 0;}
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,6 +47,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
             val info = Bundle()
             info.putInt(KEY_NUM_QUESTION, numPregunta)
             info.putBoolean(KEY_BENEDICT, benedicto)
+            info.putInt(KEY_SCORE, puntuacion)
 
             view.findNavController().navigate(R.id.action_questionFragment_to_answerFragment, info)
         }

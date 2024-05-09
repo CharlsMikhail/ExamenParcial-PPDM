@@ -21,10 +21,12 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
         val btnContinuar = view.findViewById<Button>(R.id.btn_continuar)
         var numQuestion = 1
         var benedicto = false
+        var puntuacion = 0
 
         arguments?.let { bundle ->
             numQuestion = bundle.getInt(KEY_NUM_QUESTION)
             benedicto = bundle.getBoolean(KEY_BENEDICT)
+            puntuacion = bundle.getInt(KEY_SCORE)
         }
 
         actualizarInterfaz(view, numQuestion, benedicto)
@@ -36,7 +38,9 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
                 view.findNavController().popBackStack()
                 view.findNavController().navigate(R.id.questionFragment)
             } else {
-                view.findNavController().navigate(R.id.action_answerFragment_to_scoreFragment)
+                val info = Bundle()
+                info.putInt(KEY_SCORE, puntuacion)
+                view.findNavController().navigate(R.id.action_answerFragment_to_scoreFragment, info)
             }
         }
     }
