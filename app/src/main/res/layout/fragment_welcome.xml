@@ -18,14 +18,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
+        android:fontFamily="@font/audiowide"
         android:text="@string/txt_bienvenida"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textColor="#885151"
+        android:textSize="27sp"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
+        android:fontFamily="casual"
         android:text="@string/txt_preguntas"
         android:textSize="20sp" />
 
@@ -33,16 +37,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="casual"
         android:text="@string/txt_duracion"
         android:textSize="20sp" />
 
     <Button
         android:id="@+id/btn_play"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:backgroundTint="#B83636"
+        android:fontFamily="@font/frijole"
         android:padding="5dp"
         android:text="@string/btn_play"
         android:textSize="25sp" />
