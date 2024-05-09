@@ -39,7 +39,9 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
 
             val benedicto = calcularBenedicto(opcionElegida)
 
-            // Preparamos la inforrmación qeu pasaremos a la pantalla de retroalimentación.
+            if (benedicto) puntuacion += 3 else puntuacion--
+
+            // Preparamos la información qeu pasaremos a la pantalla de retroalimentación.
             val info = Bundle()
             info.putInt(KEY_NUM_QUESTION, numPregunta)
             info.putBoolean(KEY_BENEDICT, benedicto)
@@ -57,10 +59,10 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         val rdbOpc3 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc3)
         val rdbOpc4 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc4)
 
-        val puntuacion = "Puntuacion: "
+        val puntuacionText = "Puntuacion: "
         txtPuntuacion.text = buildString {
-            append(puntuacion)
-            append(numPregunta.toString())
+            append(puntuacionText)
+            append(puntuacion.toString())
         }
 
         when (numPregunta) {
@@ -138,6 +140,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
 
     companion object {
         var numPregunta = 0
+        var puntuacion = 0
     }
 
 }
