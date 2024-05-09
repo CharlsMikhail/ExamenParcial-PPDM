@@ -71,6 +71,7 @@
     <string name="rdb_pg8_opc4">Herencia compleja</string>
     <string name="txt_rpt_pg8">Respuesta correcta: Herencia simple
     Explicación: Kotlin admite herencia simple, lo que significa que una clase puede heredar de una única clase padre. La herencia múltiple no está permitida en Kotlin para evitar problemas asociados con la ambigüedad de métodos y propiedades.</string>
+    <string name="txt_puntuacion">Puntuación: 0</string>
 
 
 </resources>

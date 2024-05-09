@@ -7,56 +7,86 @@
     android:padding="30dp"
     tools:context=".QuestionFragment">
 
+    <ImageView
+        android:id="@+id/img_title"
+        android:layout_width="350dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="11dp"
+        android:layout_gravity="center"
+        android:background="@drawable/title" />
+
+    <TextView
+        android:id="@+id/txt_puntuacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/aleo_bold"
+        android:text="@string/txt_puntuacion"
+        android:textAlignment="textEnd"
+        android:textColor="#7A4545"
+        android:textSize="20sp" />
+
     <TextView
         android:id="@+id/txt_pregunta"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/actor"
         android:text="@string/txt_pregunta1"
-        android:textSize="30sp"/>
+        android:textAlignment="center"
+        android:textColor="#26675F"
+        android:textSize="25sp" />
 
     <RadioGroup
-        android:layout_marginTop="35dp"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <RadioButton
             android:id="@+id/rdb_pregunta_opc1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="@string/rdb_pg1_opc1" />
+            android:fontFamily="@font/aleo_bold"
+            android:text="@string/rdb_pg1_opc1"
+            android:textAlignment="viewStart"
+            android:textSize="28sp" />
 
         <RadioButton
             android:id="@+id/rdb_pregunta_opc2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="@string/rdb_pg1_opc2" />
+            android:fontFamily="@font/aleo_bold"
+            android:text="@string/rdb_pg1_opc2"
+            android:textSize="28sp" />
 
         <RadioButton
             android:id="@+id/rdb_pregunta_opc3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="@string/rdb_pg1_opc3" />
+            android:fontFamily="@font/aleo_bold"
+            android:text="@string/rdb_pg1_opc3"
+            android:textSize="28sp" />
 
         <RadioButton
             android:id="@+id/rdb_pregunta_opc4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-            android:text="@string/rdb_pg1_opc4" />
+            android:fontFamily="@font/aleo_bold"
+            android:text="@string/rdb_pg1_opc4"
+            android:textSize="28sp" />
     </RadioGroup>
 
     <Button
         android:id="@+id/btn_play"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:backgroundTint="#B83636"
+        android:fontFamily="@font/frijole"
         android:padding="5dp"
         android:text="@string/btn_validar"
-        android:textSize="25sp" />
+        android:textSize="23sp" />
 
 </LinearLayout>
