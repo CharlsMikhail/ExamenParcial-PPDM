@@ -20,6 +20,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        numPregunta++
         actualizarInterfaz(view)
 
         val rdbOpc1 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc1)
@@ -40,7 +41,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
 
             // Preparamos la inforrmación qeu pasaremos a la pantalla de retroalimentación.
             val info = Bundle()
-            info.putInt(KEY_NUM_QUESTION, opcionElegida)
+            info.putInt(KEY_NUM_QUESTION, numPregunta)
             info.putBoolean(KEY_BENEDICT, benedicto)
 
             view.findNavController().navigate(R.id.action_questionFragment_to_answerFragment, info)
@@ -136,7 +137,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
     }
 
     companion object {
-        var numPregunta = 1
+        var numPregunta = 0
     }
 
 }
