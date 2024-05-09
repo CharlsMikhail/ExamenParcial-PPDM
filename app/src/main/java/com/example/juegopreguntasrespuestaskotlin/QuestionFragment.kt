@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.RadioButton
 import android.widget.TextView
+import androidx.navigation.findNavController
 
 const val KEY_NUM_QUESTION = "question"
 const val KEY_BENEDICT = "answer"
@@ -25,9 +26,9 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         val rdbOpc2 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc2)
         val rdbOpc3 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc3)
 
-        val btn_validar = view.findViewById<Button>(R.id.btn_validar)
+        val btnValidar = view.findViewById<Button>(R.id.btn_validar)
 
-        btn_validar.setOnClickListener {
+        btnValidar.setOnClickListener {
             val opcionElegida = when {
                 rdbOpc1.isChecked -> 1
                 rdbOpc2.isChecked -> 2
@@ -37,10 +38,12 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
 
             val benedicto = calcularBenedicto(opcionElegida)
 
+            // Preparamos la inforrmación qeu pasaremos a la pantalla de retroalimentación.
             val info = Bundle()
             info.putInt(KEY_NUM_QUESTION, opcionElegida)
-            info.putBoolean(KEY_BENEDICT, opcionElegida)
+            info.putBoolean(KEY_BENEDICT, benedicto)
 
+            view.findNavController().navigate(R.id.action_questionFragment_to_answerFragment, info)
         }
     }
 
