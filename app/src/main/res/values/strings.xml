@@ -9,6 +9,10 @@
     <string name="rdb_pg1_opc2">b) Float</string>
     <string name="rdb_pg1_opc3">c) Double</string>
     <string name="rdb_pg1_opc4">d) String</string>
+    <string name="txt_rpt_pg1">Respuesta correcta: a) Int
+    Explicación: En Kotlin, el tipo de dato Int se utiliza para representar números enteros. Los tipos Float y Double son para números decimales, mientras que String es para cadenas de texto.</string>
+
     <string name="btn_validar">Validar</string>
     <string name="btn_next">Continuar</string>
+    <string name="txt_res_detallada">A continuación se le muestra una respuesta más detallada.</string>
 </resources>
