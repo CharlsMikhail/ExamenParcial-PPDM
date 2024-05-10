@@ -70,6 +70,7 @@
     <string name="txt_score">Puntuacion Final</string>
     <string name="btn_inicio">Volver al inicio</string>
     <string name="score">0</string>
+    <string name="txt_top_score">Mejor Puntuación: %d</string>
 
 
 </resources>

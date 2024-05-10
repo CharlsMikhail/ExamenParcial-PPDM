@@ -17,6 +17,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         if (numPregunta >= 8) { puntuacion = 0; numPregunta = 0;}
     }
 
