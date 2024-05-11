@@ -15,9 +15,6 @@ var startTime = 0.0
 var endTime = 0.0
 
 class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
