@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
  * la visualización de las respuestas.
  * @author Carlos Mijail Mamani Anccasi
  * @creationDate 08/05/24
- * @lastModification 09/05/24
+ * @lastModification 10/05/24
  */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

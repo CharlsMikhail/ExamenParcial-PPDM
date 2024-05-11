@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Preguntas De Kotlin</string>
+    <string name="app_name">KotLearn</string>
     <string name="txt_bienvenida">¡Bienvenido al Juego de Preguntas de Kotlin!</string>
-    <string name="txt_preguntas">Número de preguntas:      8 </string>
+    <string name="txt_preguntas">Número de preguntas: 8</string>
     <string name="txt_top_time">Mejor tiempo: %s segundos</string>
     <string name="btn_play">Jugar</string>
     <string name="btn_validar">Validar</string>
