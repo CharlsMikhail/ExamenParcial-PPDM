@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.findNavController
 
 class AnswerFragment : Fragment(R.layout.fragment_answer) {
@@ -36,6 +37,12 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
                 view.findNavController().popBackStack()
                 view.findNavController().navigate(R.id.questionFragment)
             } else {
+                // Capturamos el tiempo de fin.
+                endTime = System.currentTimeMillis() / 1000.0
+
+                val formattedTime = String.format("%.2f", endTime- startTime)
+                Toast.makeText(context, "Demoro: $formattedTime segundos", Toast.LENGTH_LONG).show()
+
                 val info = Bundle()
                 info.putInt(KEY_SCORE, puntuacion)
                 view.findNavController().navigate(R.id.action_answerFragment_to_scoreFragment, info)
