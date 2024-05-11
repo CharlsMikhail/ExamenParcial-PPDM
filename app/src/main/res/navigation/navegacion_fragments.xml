@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_answer" >
         <action
             android:id="@+id/action_answerFragment_to_scoreFragment"
-            app:destination="@id/scoreFragment" />
+            app:destination="@id/scoreFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -21,7 +23,9 @@
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_questionFragment"
-            app:destination="@id/questionFragment" />
+            app:destination="@id/questionFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/questionFragment"
@@ -30,7 +34,9 @@
         tools:layout="@layout/fragment_question" >
         <action
             android:id="@+id/action_questionFragment_to_answerFragment"
-            app:destination="@id/answerFragment" />
+            app:destination="@id/answerFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/scoreFragment"
