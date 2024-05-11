@@ -10,7 +10,7 @@ import androidx.navigation.findNavController
 const val KEY_TOP_SCORE = "topScore"
 const val KEY_TOP_TIME = "topTime"
 
-// Inicializaremos los que guardaran el tiempo del inicio y final y con ello hallar cuando demoro.
+// Inicializamoslos que capturaran el tiempo del inicio y fin; y con ello hallar cuanto demoro.
 var startTime = 0.0
 var endTime = 0.0
 

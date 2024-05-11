@@ -17,13 +17,14 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        // Si se terminaron las preguntas en ese caso REINICIAMOS el JUEGO.
         if (numPregunta >= 8) { puntuacion = 0; numPregunta = 0;}
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Continuamos con la siguiente pregunta.
         numPregunta++
         actualizarInterfaz(view)
 
@@ -35,6 +36,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         val btnValidar = view.findViewById<Button>(R.id.btn_validar)
 
         btnValidar.setOnClickListener {
+            // Capturamos la eleccion del usuario
             val opcionElegida = when {
                 rdbOpc1.isChecked -> 1
                 rdbOpc2.isChecked -> 2
@@ -46,8 +48,9 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
                 }
             }
 
-            val benedicto = calcularBenedicto(opcionElegida)
+            val benedicto = decretarBenedicto(opcionElegida)
 
+            // Agregamos o restamos según al benedicto.
             if (benedicto) puntuacion += 3 else puntuacion--
 
             // Preparamos la información qeu pasaremos a la pantalla de retroalimentación.
@@ -55,7 +58,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
             info.putInt(KEY_NUM_QUESTION, numPregunta)
             info.putBoolean(KEY_BENEDICT, benedicto)
             info.putInt(KEY_SCORE, puntuacion)
-
+            // Saltamos a AnswerFragment()
             view.findNavController().navigate(R.id.action_questionFragment_to_answerFragment, info)
         }
     }
@@ -69,12 +72,14 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         val rdbOpc3 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc3)
         val rdbOpc4 = view.findViewById<RadioButton>(R.id.rdb_pregunta_opc4)
 
+        // Actualizamos la puntutacion actual en la interfaz.
         val puntuacionText = "Puntuacion: "
         txtPuntuacion.text = buildString {
             append(puntuacionText)
             append(puntuacion.toString())
         }
 
+        // Actualizamos la interfaz según el número de pregunta actual.
         when (numPregunta) {
             1 -> {
                 txtPregunta.text = getString(R.string.txt_pregunta1)
@@ -135,7 +140,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
         }
     }
 
-    private fun calcularBenedicto(opcionElegida: Int): Boolean {
+    private fun decretarBenedicto(opcionElegida: Int): Boolean {
         return when (numPregunta) {
             1 -> opcionElegida == 1
             2 -> opcionElegida == 1
@@ -149,6 +154,7 @@ class QuestionFragment : Fragment(R.layout.fragment_question) {
     }
 
     companion object {
+        // Nos aseguramos que todas las instancias de este objeto manejen la misma información.
         var numPregunta = 0
         var puntuacion = 0
     }

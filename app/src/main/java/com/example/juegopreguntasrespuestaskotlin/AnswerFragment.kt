@@ -19,10 +19,13 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
         super.onViewCreated(view, savedInstanceState)
 
         val btnContinuar = view.findViewById<Button>(R.id.btn_continuar)
+
+        // inicializamos las variables para poder usarlas posteriormente..
         var numQuestion = 1
         var benedicto = false
         var puntuacion = 0
 
+        // Recuperamos la informaición enviada desde QuestionFragment()
         arguments?.let { bundle ->
             numQuestion = bundle.getInt(KEY_NUM_QUESTION)
             benedicto = bundle.getBoolean(KEY_BENEDICT)
@@ -32,6 +35,7 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
         actualizarInterfaz(view, numQuestion, benedicto)
 
         btnContinuar.setOnClickListener {
+            //Nos cercioramos si aun quedan preguntas o no; para actuar según ello.
             if (numQuestion < 8) {
                 view.findNavController().popBackStack()
                 view.findNavController().popBackStack()
@@ -40,9 +44,7 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
                 // Capturamos el tiempo de fin.
                 endTime = System.currentTimeMillis() / 1000.0
 
-                //val formattedTime = String.format("%.2f", endTime - startTime)
-                //Toast.makeText(context, "Demoro: $formattedTime segundos", Toast.LENGTH_LONG).show()
-
+                // Preparamos la inforamción para dar salto a ScoreFragment()
                 val info = Bundle()
                 info.putInt(KEY_SCORE, puntuacion)
                 view.findNavController().navigate(R.id.action_answerFragment_to_scoreFragment, info)

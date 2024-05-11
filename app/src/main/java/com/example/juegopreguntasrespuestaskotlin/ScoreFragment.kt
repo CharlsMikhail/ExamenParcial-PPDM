@@ -21,13 +21,14 @@ class ScoreFragment : Fragment(R.layout.fragment_score) {
         val btnInicio = view.findViewById<Button>(R.id.btn_inicio)
         var puntuacion = 0
 
+        // Recuperamos la informacion enviada por AnswerFragment()
         arguments?.let { bundle ->
             puntuacion = bundle.getInt(KEY_SCORE)
         }
         txtPuntuacion.text = puntuacion.toString()
 
         btnInicio.setOnClickListener {
-            // Actualizamos la mejor puntuación y el mejor tiempo
+            // Actualizamos la mejor puntuación y el mejor tiempo; volvemos a WelcomeFragment()
             actualizarMejorTiempoYPuntaje(puntuacion)
             findNavController().popBackStack(R.id.welcomeFragment, false)
         }
@@ -53,8 +54,5 @@ class ScoreFragment : Fragment(R.layout.fragment_score) {
                 apply()
             }
         }
-
-
     }
-
 }

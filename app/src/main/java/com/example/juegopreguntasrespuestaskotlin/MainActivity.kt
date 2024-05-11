@@ -10,11 +10,20 @@ import androidx.appcompat.app.AppCompatActivity
  * la visualización de las respuestas.
  * @author Carlos Mijail Mamani Anccasi
  * @creationDate 08/05/24
- * @lastModification 10/05/24
+ * @lastModification 11/05/24
  */
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // Esta ACTIVIDAD es quien ALBERGA a todas los FRAGMENTOS:
+        // 0. WelcomeFragmet -> Se muestra una pequela bienvenida a el usuario apr que sepa de que
+        //    trata el Juego, junto a detalle y mejor tiempo y puntuacion del juego.
+        // 1. QuestionFragment -> Es por donde comienza al inicializar al app y donde se muestra la
+        //    primera pregunta con sus respectivas alternativas.
+        // 2. AnswerFragment -> Se muestra retroalimentacion al usuario sobre su respuesta en
+        //    QuestionFragment.
+        // 3. ScoreFragment -> Se muestra cuando ya no hya mas pregunta y se da a concer el puntaje
+        //     y el tiempo demorado en todas las preguntas.
     }
 }
