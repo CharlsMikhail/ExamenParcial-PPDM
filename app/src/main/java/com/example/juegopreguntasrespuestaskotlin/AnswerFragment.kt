@@ -7,7 +7,6 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
-import kotlin.properties.Delegates
 
 class AnswerFragment : Fragment(R.layout.fragment_answer) {
 
@@ -33,7 +32,6 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
 
         btnContinuar.setOnClickListener {
             if (numQuestion < 8) {
-
                 view.findNavController().popBackStack()
                 view.findNavController().popBackStack()
                 view.findNavController().navigate(R.id.questionFragment)

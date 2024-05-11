@@ -1,5 +1,6 @@
 package com.example.juegopreguntasrespuestaskotlin
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
@@ -26,6 +27,15 @@ class ScoreFragment : Fragment(R.layout.fragment_score) {
         txtPuntuacion.text = puntuacion.toString()
 
         btnInicio.setOnClickListener {
+            // Actualizamos la mejor puntuación
+            val sharedPrefs = requireActivity().getSharedPreferences("MiAppPrefs", Context.MODE_PRIVATE)
+            val mejorPuntuacionActual = sharedPrefs.getInt(KEY_TOP_SCORE, 0)
+            if (puntuacion > mejorPuntuacionActual) {
+                with(sharedPrefs.edit()) {
+                    putInt(KEY_TOP_SCORE, puntuacion)
+                    apply()
+                }
+            }
             findNavController().popBackStack(R.id.welcomeFragment, false)
         }
     }
