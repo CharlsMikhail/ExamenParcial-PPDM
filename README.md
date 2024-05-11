@@ -6,7 +6,7 @@ KotLearn es un juego de preguntas y respuestas diseñado para poner a prueba tus
 ## Repositorio
 Este repositorio ha sido creado exclusivamente para el examen parcial del curso de Programación de Dispositivos Móviles de ULASALLE. Fue desarrollado por **Carlos Mijail Mamani Anccasi**.
 
-- Fecha: 10-05-2024
+- Fecha: 11-05-2024
 - Link del repositorio: [KotLearn en GitHub](https://github.com/CharlsMikhail/ExamenParcial-PPDM.git)
 
 ## Requerimientos
