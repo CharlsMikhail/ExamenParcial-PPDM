@@ -2,11 +2,12 @@
     <string name="app_name">Preguntas De Kotlin</string>
     <string name="txt_bienvenida">¡Bienvenido al Juego de Preguntas de Kotlin!</string>
     <string name="txt_preguntas">Número de preguntas:      8 </string>
-    <string name="txt_duracion">Duración:      5 minutos </string>
+    <string name="txt_top_time">Mejor tiempo: %s segundos</string>
     <string name="btn_play">Jugar</string>
     <string name="btn_validar">Validar</string>
     <string name="btn_next">Continuar</string>
     <string name="txt_res_detallada">Más detalle:</string>
+    <string name="txt_top_score">Mejor Puntuación: %d</string>
 
     <string name="txt_pregunta1">¿Cuál es el tipo de dato utilizado para representar números enteros en Kotlin?</string>
     <string name="rdb_pg1_opc1">Int</string>
@@ -70,7 +71,5 @@
     <string name="txt_score">Puntuacion Final</string>
     <string name="btn_inicio">Volver al inicio</string>
     <string name="score">0</string>
-    <string name="txt_top_score">Mejor Puntuación: %d</string>
-
 
 </resources>

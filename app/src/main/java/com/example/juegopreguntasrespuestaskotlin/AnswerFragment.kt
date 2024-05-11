@@ -40,8 +40,8 @@ class AnswerFragment : Fragment(R.layout.fragment_answer) {
                 // Capturamos el tiempo de fin.
                 endTime = System.currentTimeMillis() / 1000.0
 
-                val formattedTime = String.format("%.2f", endTime- startTime)
-                Toast.makeText(context, "Demoro: $formattedTime segundos", Toast.LENGTH_LONG).show()
+                //val formattedTime = String.format("%.2f", endTime - startTime)
+                //Toast.makeText(context, "Demoro: $formattedTime segundos", Toast.LENGTH_LONG).show()
 
                 val info = Bundle()
                 info.putInt(KEY_SCORE, puntuacion)

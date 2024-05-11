@@ -27,16 +27,34 @@ class ScoreFragment : Fragment(R.layout.fragment_score) {
         txtPuntuacion.text = puntuacion.toString()
 
         btnInicio.setOnClickListener {
-            // Actualizamos la mejor puntuación
-            val sharedPrefs = requireActivity().getSharedPreferences("MiAppPrefs", Context.MODE_PRIVATE)
-            val mejorPuntuacionActual = sharedPrefs.getInt(KEY_TOP_SCORE, 0)
-            if (puntuacion > mejorPuntuacionActual) {
-                with(sharedPrefs.edit()) {
-                    putInt(KEY_TOP_SCORE, puntuacion)
-                    apply()
-                }
-            }
+            // Actualizamos la mejor puntuación y el mejor tiempo
+            actualizarMejorTiempoYPuntaje(puntuacion)
             findNavController().popBackStack(R.id.welcomeFragment, false)
         }
     }
+
+    private fun actualizarMejorTiempoYPuntaje(puntuacion: Int) {
+        val sharedPrefs = requireActivity().getSharedPreferences("MiAppPrefs", Context.MODE_PRIVATE)
+        // Mejor puntuación
+        val mejorPuntuacionActual = sharedPrefs.getInt(KEY_TOP_SCORE, 0)
+        if (puntuacion > mejorPuntuacionActual) {
+            with(sharedPrefs.edit()) {
+                putInt(KEY_TOP_SCORE, puntuacion)
+                apply()
+            }
+        }
+
+        // Mejor tiempo
+        val mejorTiempoActual: Float = sharedPrefs.getFloat(KEY_TOP_TIME, 0F)
+        val time = (endTime - startTime).toFloat()
+        if (time < mejorTiempoActual) {
+            with(sharedPrefs.edit()) {
+                putFloat(KEY_TOP_TIME, time)
+                apply()
+            }
+        }
+
+
+    }
+
 }
