@@ -19,7 +19,7 @@
     <string name="txt_pregunta2">¿Cuál es la palabra clave utilizada para definir una función en Kotlin?</string>
     <string name="rdb_pg2_opc1">fun</string>
     <string name="rdb_pg2_opc2">def</string>
-    <string name="rdb_pg2_opc3">funtion</string>
+    <string name="rdb_pg2_opc3">void</string>
     <string name="rdb_pg2_opc4">function</string>
     <string name="txt_rpt_pg2">La palabra clave fun se utiliza en Kotlin para definir una función. Es la forma estándar de declarar funciones en este lenguaje.</string>
 
@@ -71,5 +71,8 @@
     <string name="txt_score">Puntuacion Final</string>
     <string name="btn_inicio">Volver al inicio</string>
     <string name="score">0</string>
+    <string name="img_description_benedict">Imagen que represnta el benedicto</string>
+    <string name="img_description_logo">Imagen del logo de la app</string>
+    <string name="txt_time">Tiempo demorado</string>
 
 </resources>

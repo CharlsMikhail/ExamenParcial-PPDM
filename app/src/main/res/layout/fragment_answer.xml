@@ -24,7 +24,8 @@
         android:layout_height="280dp"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
-        android:background="@drawable/incorrecto" />
+        android:background="@drawable/incorrecto"
+        android:contentDescription="@string/img_description_benedict" />
 
     <TextView
         android:layout_width="match_parent"

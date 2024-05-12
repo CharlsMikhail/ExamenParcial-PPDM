@@ -9,23 +9,28 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
 class ScoreFragment : Fragment(R.layout.fragment_score) {
-
+    lateinit var txtTiempo: TextView
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val txtPuntuacion = view.findViewById<TextView>(R.id.score)
+        txtTiempo = view.findViewById(R.id.time)
         val btnInicio = view.findViewById<Button>(R.id.btn_inicio)
+
         var puntuacion = 0
 
         // Recuperamos la informacion enviada por AnswerFragment()
         arguments?.let { bundle ->
             puntuacion = bundle.getInt(KEY_SCORE)
         }
+
+        //Pintamos la puntuacion actual
         txtPuntuacion.text = puntuacion.toString()
 
+        // Actualizamos la mejor puntuación y el mejor tiempo; volvemos a WelcomeFragment()
+        actualizarMejorTiempoYPuntaje(puntuacion)
+
         btnInicio.setOnClickListener {
-            // Actualizamos la mejor puntuación y el mejor tiempo; volvemos a WelcomeFragment()
-            actualizarMejorTiempoYPuntaje(puntuacion)
             findNavController().popBackStack(R.id.welcomeFragment, false)
         }
     }
@@ -44,6 +49,10 @@ class ScoreFragment : Fragment(R.layout.fragment_score) {
         // Mejor tiempo
         val mejorTiempoActual: Float = sharedPrefs.getFloat(KEY_TOP_TIME, 0F)
         val time = (endTime - startTime).toFloat()
+
+        //Pintamos el tiempo de demora actual
+        txtTiempo.text = time.toString()
+
         if (time < mejorTiempoActual) {
             with(sharedPrefs.edit()) {
                 putFloat(KEY_TOP_TIME, time)
